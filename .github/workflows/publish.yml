@@ -89,14 +89,6 @@ jobs:
             echo "Version $VERSION not found on npm, will publish."
           fi
 
-      # 可选：预先运行单元测试与构建，提前暴露错误
-      # 注意：npm publish 会触发 prepublishOnly（其中也会执行 test & build）
-      - name: Run tests and build (optional precheck)
-        if: env.SHOULD_PUBLISH == 'true' && steps.version.outputs.should_publish == 'true'
-        run: |
-          yarn test
-          yarn build:all
-
       # 发布到 npm。main 使用 latest tag，dev 使用 dev tag。
       # 需要在项目 Secrets 配置 NPM_TOKEN（具有发布权限的 npm 令牌）。
       - name: Publish to npm
