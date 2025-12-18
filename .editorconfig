@@ -11,6 +11,10 @@ indent_style = space
 [*.{js,jsx,ts,tsx}]
 indent_size = 2
 
+# CJS
+[*.{cjs}]
+indent_size = 4
+
 # Styles/HTML: 4 spaces
 [*.{css,scss,html}]
 indent_size = 4
