@@ -2,6 +2,12 @@
 
 本项目的所有重要变更都将记录在此文件中。
 
+## [0.1.0] - 2025-12-19
+### 已更改
+- 升级 ESLint 至 9.39.2 并迁移为 Flat Config，提供基础与 React 专用配置。
+- 更新 typescript-eslint 8.50.0、Prettier 3.7.4 及相关插件，新增 globals 以补全内置全局变量。
+- 扩展忽略列表（含 `.history` 目录），`yarn lint` 与 `yarn audit --level moderate` 均已通过。
+
 ## [0.0.10] - 2025-12-19
 ### 新增
 - eslint 优化 sonarjs 规则
