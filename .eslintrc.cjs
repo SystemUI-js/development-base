@@ -33,7 +33,9 @@ module.exports = {
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
     ],
     // Let Prettier handle formatting
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    // 禁用仅为副作用而定义构造函数的 Sonar 规则，避免在装饰器/依赖注入场景误报
+    "sonarjs/constructor-for-side-effects": "off"
   },
   overrides: [
     {
