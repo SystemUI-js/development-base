@@ -29,5 +29,6 @@
       "target": "ES2022",
       "module": "commonjs"
     }
-  }
+  },
+  "exclude": ["vite.config.ts"]
 }
