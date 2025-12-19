@@ -14,13 +14,16 @@ module.exports = {
   plugins: [
     "@typescript-eslint",
     "jsx-a11y",
+    "sonarjs",
     "prettier"
   ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended" // Enables eslint-plugin-prettier and displays Prettier issues as ESLint errors
+    // sonarjs 3.x 面向 ESLint 9 的推荐规则集会带有不被 eslintrc 识别的字段（如 name），在 ESLint 8 需使用 legacy 版本
+    "plugin:sonarjs/recommended-legacy",
+    "plugin:prettier/recommended" // 启用 eslint-plugin-prettier，并将 Prettier 问题作为 ESLint 错误
   ],
   rules: {
     // Prefer TS-aware unused vars rule
