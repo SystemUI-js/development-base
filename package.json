@@ -1,6 +1,6 @@
 {
   "name": "@system-ui-js/development-base",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Eslint config for SystemUI.js repos",
   "keywords": [],
   "author": "ZX",

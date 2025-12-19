@@ -2,6 +2,10 @@
 
 本项目的所有重要变更都将记录在此文件中。
 
+## [0.1.2] - 2025-12-19
+### 新增
+- 提供 `tsconfig.react.json`，为 React/Vite 项目预设 JSX 模式、类型声明与路径别名。
+
 ## [0.1.1] - 2025-12-19
 ### 已更改
 - eslint 配置新增项目忽略目录（dist、coverage、node_modules、playwright-report、test-results）。
