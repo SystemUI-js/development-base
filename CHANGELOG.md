@@ -2,6 +2,11 @@
 
 本项目的所有重要变更都将记录在此文件中。
 
+## [0.1.1] - 2025-12-19
+### 已更改
+- eslint 配置新增项目忽略目录（dist、coverage、node_modules、playwright-report、test-results）。
+- 为测试文件注入 jest 全局变量，避免测试环境报未定义。
+
 ## [0.1.0] - 2025-12-19
 ### 已更改
 - 升级 ESLint 至 9.39.2 并迁移为 Flat Config，提供基础与 React 专用配置。

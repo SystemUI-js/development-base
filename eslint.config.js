@@ -8,6 +8,21 @@ import globals from 'globals';
 
 const baseIgnores = ['**/*.cjs', '**/.history/**', 'vite.config.ts', 'setupTests.ts'];
 
+const projectIgnores = ['dist', 'coverage', 'node_modules', 'playwright-report', 'test-results'];
+
+const testFilePatterns = [
+  '**/*.test.ts',
+  '**/*.test.tsx',
+  '**/*.test.js',
+  '**/*.test.jsx',
+  '**/*.spec.ts',
+  '**/*.spec.tsx',
+  '**/*.spec.js',
+  '**/*.spec.jsx',
+  'tests/**/*.{ts,tsx,js,jsx}',
+  'src/**/__tests__/**/*.{ts,tsx,js,jsx}'
+];
+
 const jsxA11yFlat = {
   name: 'jsx-a11y/recommended',
   plugins: { 'jsx-a11y': jsxA11y },
@@ -25,6 +40,10 @@ export default [
     ignores: baseIgnores
   },
   {
+    name: 'project/ignores',
+    ignores: projectIgnores
+  },
+  {
     name: 'base/language',
     languageOptions: {
       ecmaVersion: 'latest',
@@ -33,6 +52,18 @@ export default [
         ...globals.browser,
         ...globals.es2021,
         ...globals.node
+      }
+    }
+  },
+  {
+    name: 'project/tests',
+    files: testFilePatterns,
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+        ...globals.node,
+        ...globals.jest
       }
     }
   },
