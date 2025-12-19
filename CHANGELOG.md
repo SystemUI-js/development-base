@@ -2,6 +2,10 @@
 
 本项目的所有重要变更都将记录在此文件中。
 
+## [0.0.8] - 2025-12-19
+### 已修复
+- 修正 `.eslintrc.cjs` 中使用 `ignorePatterns` 替代 `ignores`，避免 ESLint 配置报错。
+
 ## [0.0.7] - 2025-12-19
 ### 已更改
 - 修改 tsconfig.json，增加 exclude，排除 vite.config.ts

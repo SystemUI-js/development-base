@@ -44,5 +44,5 @@ module.exports = {
       }
     }
   ],
-  ignores: ["**/*.cjs", "vite.config.ts", "setupTests.ts"]
+  ignorePatterns: ["**/*.cjs", "vite.config.ts", "setupTests.ts"]
 };
