@@ -18,10 +18,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "paths": {
-    "@/*": ["./src/*"]
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path alias */
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "ts-jest": {
